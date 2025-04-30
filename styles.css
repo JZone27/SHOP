@@ -1,0 +1,173 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color:#F5E8C7;
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+/* Container styles */
+.container {
+    max-width: 1000px;
+    min-width: auto;
+    max-height: 1000px;
+    min-height: auto;
+    margin: 20px auto;
+    border: 2px solid #444;
+}
+
+/* Header styles */
+header {
+    background-color: #8C4A2F;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #E27D60;
+    width: 150px;
+    float: left;
+    padding: 20px;
+    padding-bottom: 300px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    margin-bottom: 15px;
+    min-width: fit-content;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #E6B325;
+}
+
+/* Main content styles */
+.content {
+    background-color: #F5E8C7;
+    margin-left: 150px;
+    padding: 20px;
+    min-height: 400px;
+    min-width: fit-content;
+}
+
+.content h2 {
+    color: #663300;
+    margin-bottom: 15px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-list {
+    flex: 1;
+}
+
+.menu-list ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.menu-list li {
+    color: #663300;
+    margin-bottom: 8px;
+}
+
+.image-container {
+    flex: 0 0 auto;
+    padding-left: 20px;
+    margin-right: 0;
+}
+
+.pizza-image {
+    width: 200px;
+    border: 1px solid #8C4A2F;
+}
+
+.address {
+    margin-top: 20px;
+    color: #333;
+}
+
+footer {
+    clear: both;
+    background-color: #8C4A2F;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.section-content {
+    display: none; /* Hide all sections by default */
+}
+
+#home {
+    display: block; /* Show home section by default */
+}
+
+.menu-content h3 {
+    color: #663300;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.menu-content ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.menu-content li {
+    color: #663300;
+    margin-bottom: 8px;
+}
+
+.section-content {
+    display: none; /* Hide all sections by default */
+}
+
+#home {
+    display: block; /* shows home section by default*/
+}
+
+#menu:target, #music:target, #jobs:target {
+    display: block;
+}
+
+/* Hide home when another section is targeted */
+#menu:target ~ #home, #music:target ~ #home, #jobs:target ~ #home,
+#menu:target + #home, #music:target + #home, #jobs:target + #home,
+body:has(#menu:target) #home, body:has(#music:target) #home, body:has(#jobs:target) #home {
+    display: none;
+}
